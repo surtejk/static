@@ -10,7 +10,7 @@ pipeline {
               steps {
                   withAWS(region:'us-east-1',credentials:'aws-static') {
                   sh 'echo "Upload content with AWS creds"'
-                      s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'jpipeline')
+                      s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'stage_index.html', bucket:'jpipeline')
                   }
               }
          }
